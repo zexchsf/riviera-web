@@ -1,13 +1,18 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
+import { Lato } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import "./globals.css"
 
+const lato = Lato({
+  weight: ['300', '400', '700', '900'],
+  subsets: ['latin'],
+  variable: '--font-lato',
+})
+
 export const metadata: Metadata = {
-  title: "ShortletHub - Find Your Perfect Shortlet",
+  title: "Riviera Homes - Find Your Perfect Shortlet",
   description:
     "Book beautiful apartments for your stay in Lagos. Premium shortlet rentals with verified hosts and secure payments.",
   generator: "v0.app",
@@ -20,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
+      <body className={`font-sans ${lato.variable} antialiased`}>
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>
