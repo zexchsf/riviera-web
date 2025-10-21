@@ -46,7 +46,7 @@ export default function PropertyCard({
       style={{ animationDelay: `${animationDelay}ms` }}
     >
       {/* Image Container */}
-      <div className="relative overflow-hidden h-72">
+      <div className="relative overflow-hidden h-48 sm:h-56 md:h-64 lg:h-72">
         <img
           src={image || "/placeholder.svg?height=300&width=400&query=property"}
           alt={title}
@@ -58,8 +58,8 @@ export default function PropertyCard({
         
         {/* Enhanced Size Badge */}
         {size && (
-          <div className="absolute top-5 left-5">
-            <Badge className="bg-gradient-to-r from-navy-900 via-navy-800 to-navy-900 text-gold-400 border-0 font-semibold px-4 py-2 rounded-full shadow-lg backdrop-blur-sm">
+          <div className="absolute top-3 left-3 sm:top-4 sm:left-4 md:top-5 md:left-5">
+            <Badge className="bg-gradient-to-r from-navy-900 via-navy-800 to-navy-900 text-gold-400 border-0 font-semibold px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 text-xs sm:text-sm rounded-full shadow-lg backdrop-blur-sm">
               {size}
             </Badge>
           </div>
@@ -67,30 +67,30 @@ export default function PropertyCard({
       </div>
 
       {/* Content */}
-      <CardContent className="p-8 space-y-6">
+      <CardContent className="p-4 sm:p-5 md:p-6 lg:p-8 space-y-4 sm:space-y-5 md:space-y-6">
         {/* Title */}
         <div className="space-y-2">
-          <h3 className="text-2xl font-bold text-navy-900 group-hover:text-gold-600 transition-colors duration-300 leading-tight tracking-tight">
+          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-navy-900 group-hover:text-gold-600 transition-colors duration-300 leading-tight tracking-tight">
             {title}
           </h3>
           
           {/* Location */}
-          <div className="flex items-center gap-2 text-slate-500">
-            <MapPin className="h-4 w-4" />
-            <span className="text-sm font-medium">{location}</span>
+          <div className="flex items-center gap-1.5 sm:gap-2 text-slate-500">
+            <MapPin className="h-3.5 w-3.5 sm:h-4 sm:w-4 flex-shrink-0" />
+            <span className="text-xs sm:text-sm font-medium truncate">{location}</span>
           </div>
         </div>
 
         {/* Description */}
-        <p className="text-slate-600 leading-relaxed text-base line-clamp-2">
+        <p className="text-slate-600 leading-relaxed text-xs sm:text-sm md:text-base line-clamp-2">
           {description}
         </p>
 
         {/* Price and Action */}
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {/* Price */}
           <div className="flex items-baseline gap-2">
-            <span className="text-3xl font-bold text-navy-900 tracking-tight">
+            <span className="text-2xl sm:text-3xl font-bold text-navy-900 tracking-tight">
               {price}
             </span>
           </div>
@@ -98,11 +98,11 @@ export default function PropertyCard({
           {/* Enhanced Button */}
           <Button
             onClick={handleInquire}
-            className="w-full bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 text-navy-900 font-semibold py-3 px-6 rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-lg shadow-gold-500/25 group/btn"
+            className="w-full bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 text-navy-900 font-semibold py-2.5 sm:py-3 px-4 sm:px-6 text-sm sm:text-base rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-lg shadow-gold-500/25 group/btn"
           >
             <span className="flex items-center justify-center gap-2">
               Inquire Now
-              <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+              <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
             </span>
           </Button>
         </div>

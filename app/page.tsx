@@ -107,17 +107,17 @@ export default function ShortletRental() {
       <Hero />
 
       {/* Featured Section */}
-      <section className="py-20 px-4">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           <div
             id="featured"
             data-animate
-            className={`text-center mb-16 transition-all duration-1000 ${
+            className={`text-center mb-8 sm:mb-12 md:mb-16 transition-all duration-1000 ${
               isVisible.featured ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-navy-900 mb-4">Popular This Week</h2>
-            <p className="text-xl text-slate-600 text-pretty">Discover the most booked apartments in Lagos</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-navy-900 mb-3 sm:mb-4 px-4">Popular This Week</h2>
+            <p className="text-base sm:text-lg md:text-xl text-slate-600 text-pretty px-4">Discover the most booked apartments in Lagos</p>
           </div>
 
           <ApartmentGrid
@@ -131,17 +131,17 @@ export default function ShortletRental() {
       </section>
 
       {/* Apartment Listings Grid */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div
             id="listings"
             data-animate
-            className={`text-center mb-16 transition-all duration-1000 ${
+            className={`text-center mb-8 sm:mb-12 md:mb-16 transition-all duration-1000 ${
               isVisible.listings ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-navy-900 mb-4">All Available Apartments</h2>
-            <p className="text-xl text-slate-600 text-pretty">Choose from our curated selection of premium shortlets</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-navy-900 mb-3 sm:mb-4 px-4">All Available Apartments</h2>
+            <p className="text-base sm:text-lg md:text-xl text-slate-600 text-pretty px-4">Choose from our curated selection of premium shortlets</p>
           </div>
 
           <ApartmentGrid
@@ -165,10 +165,10 @@ export default function ShortletRental() {
       {/* Floating WhatsApp Button */}
       <button
         onClick={() => window.open("https://wa.me/2348123456789", "_blank")}
-        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 animate-pulse z-50"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 bg-green-500 hover:bg-green-600 text-white p-3 sm:p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 animate-pulse z-50"
         aria-label="Contact us on WhatsApp"
       >
-        <MessageCircle className="h-6 w-6" />
+        <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6" />
       </button>
     </div>
   )

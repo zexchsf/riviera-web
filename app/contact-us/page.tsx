@@ -35,7 +35,7 @@ export default function ContactUs() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-gray-900 via-glaucous-900 to-slate-gray-800 text-white py-24 px-4 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-slate-gray-900 via-glaucous-900 to-slate-gray-800 text-white py-16 sm:py-20 md:py-24 px-4 sm:px-6 overflow-hidden">
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/85 via-slate-gray-900/90 to-black/80"></div>
         
@@ -49,10 +49,10 @@ export default function ContactUs() {
         
         <div className="relative max-w-6xl mx-auto z-10 px-4">
           <div className="animate-fade-in-up">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-slate-gray-100 tracking-tight drop-shadow-lg">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-slate-gray-100 tracking-tight drop-shadow-lg">
               Get In Touch
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-slate-gray-200 leading-relaxed max-w-5xl animation-delay-200 drop-shadow-md">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-gray-200 leading-relaxed max-w-5xl animation-delay-200 drop-shadow-md">
               We're here to help you find your dream property. Reach out through any of our channels 
               and let's start a conversation.
             </p>
@@ -62,7 +62,7 @@ export default function ContactUs() {
 
       {/* Main Content */}
       <div className="min-h-screen bg-gradient-to-b from-white to-slate-gray-50">
-        <div className="max-w-6xl mx-auto px-6 md:px-12 py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16">
           
           {/* Modern Contact Cards Section */}
           <style jsx>{`
@@ -122,10 +122,10 @@ export default function ContactUs() {
             }
           `}</style>
 
-          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16">
             {/* WhatsApp Card */}
             <div 
-              className="card-hover group relative bg-white rounded-2xl p-10 transition-all duration-300 ease-in-out hover:-translate-y-1 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-[#25D366] cursor-pointer"
+              className="card-hover group relative bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-10 transition-all duration-300 ease-in-out hover:-translate-y-1 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-[#25D366] cursor-pointer"
               style={{
                 boxShadow: '0 4px 16px rgba(0, 0, 0, 0.08)',
                 maxWidth: '400px',
@@ -144,20 +144,20 @@ export default function ContactUs() {
               <div className="gradient-overlay"></div>
               
               {/* Icon Circle */}
-              <div className="flex justify-center mb-6">
+              <div className="flex justify-center mb-4 sm:mb-6">
                 <div 
                   className="relative flex items-center justify-center rounded-full transition-transform duration-300 ease-in-out group-hover:scale-110 pulse-animation"
                   style={{
-                    width: '64px',
-                    height: '64px',
+                    width: '56px',
+                    height: '56px',
                     backgroundColor: 'rgba(37, 211, 102, 0.2)'
                   }}
                 >
                   <MessageCircle 
                     className="transition-transform duration-300 ease-in-out"
                     style={{
-                      width: '28px',
-                      height: '28px',
+                      width: '24px',
+                      height: '24px',
                       color: '#25D366'
                     }}
                   />
@@ -168,7 +168,7 @@ export default function ContactUs() {
               <h3 
                 className="text-center mb-2"
                 style={{
-                  fontSize: '24px',
+                  fontSize: 'clamp(20px, 5vw, 24px)',
                   fontWeight: 700,
                   color: '#1A1A1A'
                 }}
@@ -177,9 +177,9 @@ export default function ContactUs() {
               </h3>
               
               <p 
-                className="text-center mb-6"
+                className="text-center mb-4 sm:mb-6"
                 style={{
-                  fontSize: '15px',
+                  fontSize: 'clamp(14px, 3vw, 15px)',
                   fontWeight: 400,
                   color: '#6B7280',
                   lineHeight: '1.5'
@@ -197,8 +197,8 @@ export default function ContactUs() {
                 aria-label="Start WhatsApp chat with Riviera Homes"
                 className="relative w-full text-white font-semibold rounded-lg transition-all duration-300 ease-in-out hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25D366] overflow-hidden"
                 style={{
-                  height: '48px',
-                  fontSize: '16px',
+                  height: '44px',
+                  fontSize: 'clamp(14px, 3vw, 16px)',
                   backgroundColor: '#25D366'
                 }}
                 onMouseEnter={(e) => {
@@ -223,7 +223,7 @@ export default function ContactUs() {
 
             {/* Email Card */}
             <div 
-              className="card-hover group relative bg-white rounded-2xl p-10 transition-all duration-300 ease-in-out hover:-translate-y-1 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-[#5B7C99] cursor-pointer"
+              className="card-hover group relative bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-10 transition-all duration-300 ease-in-out hover:-translate-y-1 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-[#5B7C99] cursor-pointer"
               style={{
                 boxShadow: '0 4px 16px rgba(0, 0, 0, 0.08)',
                 maxWidth: '400px',
@@ -321,7 +321,7 @@ export default function ContactUs() {
 
             {/* Instagram Card */}
             <div 
-              className="card-hover group relative bg-white rounded-2xl p-10 transition-all duration-300 ease-in-out hover:-translate-y-1 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-[#833AB4] cursor-pointer"
+              className="card-hover group relative bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-10 transition-all duration-300 ease-in-out hover:-translate-y-1 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-[#833AB4] cursor-pointer"
               style={{
                 boxShadow: '0 4px 16px rgba(0, 0, 0, 0.08)',
                 maxWidth: '400px',

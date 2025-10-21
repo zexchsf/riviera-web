@@ -7,7 +7,7 @@ export default function AboutUs() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-gray-900 via-glaucous-900 to-slate-gray-800 text-white py-24 px-4 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-slate-gray-900 via-glaucous-900 to-slate-gray-800 text-white py-16 sm:py-20 md:py-24 px-4 sm:px-6 overflow-hidden">
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/85 via-slate-gray-900/90 to-black/80"></div>
         
@@ -21,10 +21,10 @@ export default function AboutUs() {
         
         <div className="relative max-w-6xl mx-auto z-10 px-4">
           <div className="animate-fade-in-up">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-slate-gray-600 tracking-tight drop-shadow-lg">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-white tracking-tight drop-shadow-lg">
               About us
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-slate-gray-600 leading-relaxed max-w-5xl animation-delay-200 drop-shadow-md">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-gray-100 leading-relaxed max-w-5xl animation-delay-200 drop-shadow-md">
               A people-first real estate brand built on trust, collaboration, and the vision of redefining 
               what it means to own or invest in property in Nigeria.
             </p>
@@ -34,17 +34,17 @@ export default function AboutUs() {
 
       {/* Main Content */}
       <div className="min-h-screen bg-gradient-to-b from-white to-slate-gray-50">
-        <div className="max-w-5xl mx-auto px-6 md:px-12 py-24">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 sm:py-16 md:py-20 lg:py-24">
 
           {/* Content */}
-          <div className="space-y-20">
+          <div className="space-y-12 sm:space-y-16 md:space-y-20">
             
             {/* Founder's Welcome */}
             <div>
-              <h2 className="text-2xl font-bold text-slate-gray-900 mb-6">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-gray-900 mb-4 sm:mb-6">
                 Founder's Welcome
               </h2>
-              <div className="space-y-6 text-slate-gray-700 leading-relaxed">
+              <div className="space-y-4 sm:space-y-6 text-sm sm:text-base text-slate-gray-700 leading-relaxed">
                 <p>
                   Riviera Homes is a people-first real estate brand built on trust, collaboration, and the vision of redefining 
                   what it means to own or invest in property in Nigeria. We believe real estate should go beyond buildings — it 
@@ -137,66 +137,66 @@ export default function AboutUs() {
 
             {/* Our Core Values */}
             <div className="animate-fade-in-up">
-              <h2 className="text-2xl font-bold text-slate-gray-900 mb-8">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-gray-900 mb-6 sm:mb-8">
                 Our Core Values
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div className="bg-white border border-slate-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
-                  <div className="flex items-center mb-4">
-                    <div className="bg-glaucous-100 p-3 rounded-lg mr-4">
-                      <Shield className="h-6 w-6 text-glaucous-600" />
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+                <div className="bg-white border border-slate-gray-200 rounded-lg p-4 sm:p-5 md:p-6 hover:shadow-lg transition-shadow duration-300">
+                  <div className="flex items-center mb-3 sm:mb-4">
+                    <div className="bg-glaucous-100 p-2 sm:p-3 rounded-lg mr-3 sm:mr-4 flex-shrink-0">
+                      <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-glaucous-600" />
                     </div>
-                    <h3 className="font-bold text-slate-gray-900 text-lg">Integrity</h3>
+                    <h3 className="font-bold text-slate-gray-900 text-base sm:text-lg">Integrity</h3>
                   </div>
-                  <p className="text-slate-gray-700 leading-relaxed">
+                  <p className="text-sm sm:text-base text-slate-gray-700 leading-relaxed">
                     Every transaction must be clear, honest, and built on trust.
                   </p>
                 </div>
 
-                <div className="bg-white border border-slate-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
-                  <div className="flex items-center mb-4">
-                    <div className="bg-glaucous-100 p-3 rounded-lg mr-4">
-                      <Users className="h-6 w-6 text-glaucous-600" />
+                <div className="bg-white border border-slate-gray-200 rounded-lg p-4 sm:p-5 md:p-6 hover:shadow-lg transition-shadow duration-300">
+                  <div className="flex items-center mb-3 sm:mb-4">
+                    <div className="bg-glaucous-100 p-2 sm:p-3 rounded-lg mr-3 sm:mr-4 flex-shrink-0">
+                      <Users className="h-5 w-5 sm:h-6 sm:w-6 text-glaucous-600" />
                     </div>
-                    <h3 className="font-bold text-slate-gray-900 text-lg">Collaboration</h3>
+                    <h3 className="font-bold text-slate-gray-900 text-base sm:text-lg">Collaboration</h3>
                   </div>
-                  <p className="text-slate-gray-700 leading-relaxed">
+                  <p className="text-sm sm:text-base text-slate-gray-700 leading-relaxed">
                     We grow by working with others — from agents and developers to clients and communities.
                   </p>
                 </div>
 
-                <div className="bg-white border border-slate-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
-                  <div className="flex items-center mb-4">
-                    <div className="bg-glaucous-100 p-3 rounded-lg mr-4">
-                      <Star className="h-6 w-6 text-glaucous-600" />
+                <div className="bg-white border border-slate-gray-200 rounded-lg p-4 sm:p-5 md:p-6 hover:shadow-lg transition-shadow duration-300">
+                  <div className="flex items-center mb-3 sm:mb-4">
+                    <div className="bg-glaucous-100 p-2 sm:p-3 rounded-lg mr-3 sm:mr-4 flex-shrink-0">
+                      <Star className="h-5 w-5 sm:h-6 sm:w-6 text-glaucous-600" />
                     </div>
-                    <h3 className="font-bold text-slate-gray-900 text-lg">Excellence</h3>
+                    <h3 className="font-bold text-slate-gray-900 text-base sm:text-lg">Excellence</h3>
                   </div>
-                  <p className="text-slate-gray-700 leading-relaxed">
+                  <p className="text-sm sm:text-base text-slate-gray-700 leading-relaxed">
                     We hold ourselves to the highest standards in everything we do.
                   </p>
                 </div>
 
-                <div className="bg-white border border-slate-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
-                  <div className="flex items-center mb-4">
-                    <div className="bg-glaucous-100 p-3 rounded-lg mr-4">
-                      <Leaf className="h-6 w-6 text-glaucous-600" />
+                <div className="bg-white border border-slate-gray-200 rounded-lg p-4 sm:p-5 md:p-6 hover:shadow-lg transition-shadow duration-300">
+                  <div className="flex items-center mb-3 sm:mb-4">
+                    <div className="bg-glaucous-100 p-2 sm:p-3 rounded-lg mr-3 sm:mr-4 flex-shrink-0">
+                      <Leaf className="h-5 w-5 sm:h-6 sm:w-6 text-glaucous-600" />
                     </div>
-                    <h3 className="font-bold text-slate-gray-900 text-lg">Sustainability</h3>
+                    <h3 className="font-bold text-slate-gray-900 text-base sm:text-lg">Sustainability</h3>
                   </div>
-                  <p className="text-slate-gray-700 leading-relaxed">
+                  <p className="text-sm sm:text-base text-slate-gray-700 leading-relaxed">
                     We plan and build with the future in mind, ensuring our impact benefits generations to come.
                   </p>
                 </div>
 
-                <div className="bg-white border border-slate-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
-                  <div className="flex items-center mb-4">
-                    <div className="bg-glaucous-100 p-3 rounded-lg mr-4">
-                      <TrendingUp className="h-6 w-6 text-glaucous-600" />
+                <div className="bg-white border border-slate-gray-200 rounded-lg p-4 sm:p-5 md:p-6 hover:shadow-lg transition-shadow duration-300">
+                  <div className="flex items-center mb-3 sm:mb-4">
+                    <div className="bg-glaucous-100 p-2 sm:p-3 rounded-lg mr-3 sm:mr-4 flex-shrink-0">
+                      <TrendingUp className="h-5 w-5 sm:h-6 sm:w-6 text-glaucous-600" />
                     </div>
-                    <h3 className="font-bold text-slate-gray-900 text-lg">Empowerment</h3>
+                    <h3 className="font-bold text-slate-gray-900 text-base sm:text-lg">Empowerment</h3>
                   </div>
-                  <p className="text-slate-gray-700 leading-relaxed">
+                  <p className="text-sm sm:text-base text-slate-gray-700 leading-relaxed">
                     We help individuals build financial security and confidence through verified property investments.
                   </p>
                 </div>
