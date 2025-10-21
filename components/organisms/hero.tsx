@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { MapPin, Calendar, Users, Search, Menu } from "lucide-react"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { MapPin, Calendar, Users, Search, Menu } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -41,7 +41,9 @@ export default function Hero() {
 
           {/* Description */}
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-            We're a trusted digital platform that connects you with premium shortlet rentals and land investments to make your property journey seamless and rewarding.
+            We're a trusted digital platform that connects you with premium
+            shortlet rentals and land investments to make your property journey
+            seamless and rewarding.
           </p>
 
           {/* Call-to-Action Buttons */}
@@ -51,8 +53,18 @@ export default function Hero() {
             </Button>
             <div className="flex items-center text-black font-semibold cursor-pointer hover:text-gray-600 transition-colors">
               Book a Call
-              <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <svg
+                className="ml-2 w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
               </svg>
             </div>
           </div>
@@ -69,7 +81,8 @@ export default function Hero() {
               </div>
             </div>
             <p className="text-sm text-gray-600 max-w-xs">
-              This platform meets high standards of security and customer satisfaction.
+              This platform meets high standards of security and customer
+              satisfaction.
             </p>
           </div>
         </div>
@@ -90,8 +103,23 @@ export default function Hero() {
         {/* Navigation */}
         <nav className="relative z-10 p-8">
           <div className="flex items-center justify-end gap-8">
-            <a href="/about-us" className="text-white hover:text-gold-400 font-medium transition-colors">
+            <a
+              href="/properties"
+              className="text-white hover:text-gold-400 font-medium transition-colors"
+            >
+              Our Properties
+            </a>
+            <a
+              href="/about-us"
+              className="text-white hover:text-gold-400 font-medium transition-colors"
+            >
               About us
+            </a>
+            <a
+              href="/contact-us"
+              className="text-white hover:text-gold-400 font-medium transition-colors"
+            >
+              Contact Us
             </a>
             <button className="bg-white/20 backdrop-blur-sm rounded-lg p-2">
               <Menu className="h-6 w-6 text-white" />
@@ -101,8 +129,18 @@ export default function Hero() {
 
         {/* Scroll Indicator */}
         <div className="absolute right-8 top-1/2 transform -translate-y-1/2 flex flex-col items-center gap-2">
-          <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+          <svg
+            className="w-4 h-4 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M5 15l7-7 7 7"
+            />
           </svg>
           <div className="flex flex-col gap-1">
             {[1, 2, 3, 4, 5].map((dot, index) => (
@@ -114,11 +152,21 @@ export default function Hero() {
               />
             ))}
           </div>
-          <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          <svg
+            className="w-4 h-4 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 9l-7 7-7-7"
+            />
           </svg>
         </div>
       </div>
     </div>
-  )
+  );
 }
