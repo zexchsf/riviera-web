@@ -1,15 +1,19 @@
-"use client"
+"use client";
 
-import Footer from "@/components/organisms/footer"
-import Hero from "@/components/organisms/hero"
-import ApartmentGrid from "@/components/organisms/property/apartment-grid"
-import LandForSale from "@/components/organisms/property/land-for-sale"
-import Testimonials from "@/components/organisms/testimonials"
-import { MessageCircle } from "lucide-react"
-import { useEffect, useState } from "react"
+import Footer from "@/components/organisms/footer";
+import Hero from "@/components/organisms/hero";
+import ApartmentGrid from "@/components/organisms/property/apartment-grid";
+import LandForSale from "@/components/organisms/property/land-for-sale";
+import Testimonials from "@/components/organisms/testimonials";
+import { LuMessageCircle } from "react-icons/lu";
+import { useEffect, useState } from "react";
+import ValuesSection from "@/components/organisms/home/values-section";
+import AboutUsSection from "@/components/organisms/home/about-us-section";
+import PartnersSection from "@/components/organisms/home/partners-section";
+import TestimonialSection from "@/components/organisms/home/testimonial-section";
 
 export default function ShortletRental() {
-  const [isVisible, setIsVisible] = useState<Record<string, boolean>>({})
+  const [isVisible, setIsVisible] = useState<Record<string, boolean>>({});
 
   const apartments = [
     {
@@ -72,39 +76,44 @@ export default function ShortletRental() {
       rating: 4.6,
       reviews: 112,
     },
-  ]
+  ];
 
-  const featuredApartments = apartments.slice(0, 3)
+  const featuredApartments = apartments.slice(0, 3);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setIsVisible((prev) => ({ ...prev, [entry.target.id]: true }))
+            setIsVisible((prev) => ({ ...prev, [entry.target.id]: true }));
           }
-        })
+        });
       },
-      { threshold: 0.1 },
-    )
+      { threshold: 0.1 }
+    );
 
     document.querySelectorAll("[data-animate]").forEach((el) => {
-      observer.observe(el)
-    })
+      observer.observe(el);
+    });
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   const handleContactHost = (apartmentTitle: string) => {
-    const message = `Hi! I'm interested in booking "${apartmentTitle}". Could you please provide more details?`
-    const whatsappUrl = `https://wa.me/2348123456789?text=${encodeURIComponent(message)}`
-    window.open(whatsappUrl, "_blank")
-  }
+    const message = `Hi! I'm interested in booking "${apartmentTitle}". Could you please provide more details?`;
+    const whatsappUrl = `https://wa.me/2348123456789?text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(whatsappUrl, "_blank");
+  };
 
   return (
     <div className="min-h-screen bg-slate-50">
-      {/* Hero Section */}
       <Hero />
+
+      <PartnersSection />
+
+      <ValuesSection />
 
       {/* Featured Section */}
       <section className="py-20 px-4">
@@ -113,11 +122,17 @@ export default function ShortletRental() {
             id="featured"
             data-animate
             className={`text-center mb-16 transition-all duration-1000 ${
-              isVisible.featured ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              isVisible.featured
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
             }`}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-navy-900 mb-4">Popular This Week</h2>
-            <p className="text-xl text-slate-600 text-pretty">Discover the most booked apartments in Lagos</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-navy-900 mb-4">
+              Popular This Week
+            </h2>
+            <p className="text-xl text-slate-600 text-pretty">
+              Discover the most booked apartments in Lagos
+            </p>
           </div>
 
           <ApartmentGrid
@@ -137,11 +152,17 @@ export default function ShortletRental() {
             id="listings"
             data-animate
             className={`text-center mb-16 transition-all duration-1000 ${
-              isVisible.listings ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              isVisible.listings
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
             }`}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-navy-900 mb-4">All Available Apartments</h2>
-            <p className="text-xl text-slate-600 text-pretty">Choose from our curated selection of premium shortlets</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-navy-900 mb-4">
+              All Available Apartments
+            </h2>
+            <p className="text-xl text-slate-600 text-pretty">
+              Choose from our curated selection of premium shortlets
+            </p>
           </div>
 
           <ApartmentGrid
@@ -154,11 +175,15 @@ export default function ShortletRental() {
         </div>
       </section>
 
+      <TestimonialSection />
+
       {/* Testimonials Section */}
-      <Testimonials isVisible={isVisible.testimonials} />
+      {/* <Testimonials isVisible={isVisible.testimonials} /> */}
 
       {/* Land for Sale Section */}
       <LandForSale isVisible={isVisible["land-for-sale"]} />
+
+      <AboutUsSection />
 
       <Footer />
 
@@ -168,8 +193,8 @@ export default function ShortletRental() {
         className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 animate-pulse z-50"
         aria-label="Contact us on WhatsApp"
       >
-        <MessageCircle className="h-6 w-6" />
+        <LuMessageCircle className="h-6 w-6" />
       </button>
     </div>
-  )
+  );
 }

@@ -140,6 +140,9 @@ importers:
       react-hook-form:
         specifier: ^7.60.0
         version: 7.65.0(react@18.3.1)
+      react-icons:
+        specifier: ^5.5.0
+        version: 5.5.0(react@18.3.1)
       react-resizable-panels:
         specifier: ^2.1.7
         version: 2.1.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -149,6 +152,9 @@ importers:
       sonner:
         specifier: ^1.7.4
         version: 1.7.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      swiper:
+        specifier: ^12.0.3
+        version: 12.0.3
       tailwind-merge:
         specifier: ^2.5.5
         version: 2.6.0
@@ -1451,6 +1457,11 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18 || ^19
 
+  react-icons@5.5.0:
+    resolution: {integrity: sha512-MEFcXdkP3dLo8uumGI5xN3lDFNsRtrjbOEKDLD7yv76v4wpnEq2Lt2qeHaQOr34I/wPN3s3+N08WkQ+CW37Xiw==}
+    peerDependencies:
+      react: '*'
+
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
@@ -1548,6 +1559,10 @@ packages:
         optional: true
       babel-plugin-macros:
         optional: true
+
+  swiper@12.0.3:
+    resolution: {integrity: sha512-BHd6U1VPEIksrXlyXjMmRWO0onmdNPaTAFduzqR3pgjvi7KfmUCAm/0cj49u2D7B0zNjMw02TSeXfinC1hDCXg==}
+    engines: {node: '>= 4.7.0'}
 
   tailwind-merge@2.6.0:
     resolution: {integrity: sha512-P+Vu1qXfzediirmHOC3xKGAYeZtPcV9g76X+xg2FD4tYgR71ewMA35Y3sCz3zhiN/dwefRpJX0yBcgwi1fXNQA==}
@@ -2823,6 +2838,10 @@ snapshots:
     dependencies:
       react: 18.3.1
 
+  react-icons@5.5.0(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+
   react-is@16.13.1: {}
 
   react-is@18.3.1: {}
@@ -2914,6 +2933,8 @@ snapshots:
     dependencies:
       client-only: 0.0.1
       react: 18.3.1
+
+  swiper@12.0.3: {}
 
   tailwind-merge@2.6.0: {}
 

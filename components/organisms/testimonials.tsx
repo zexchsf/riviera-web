@@ -1,64 +1,71 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Card, CardContent } from "@/components/ui/card"
-import { Star, Quote } from "lucide-react"
+import { useState, useEffect } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { LuStar, LuQuote } from "react-icons/lu";
 
 interface Testimonial {
-  name: string
-  rating: number
-  comment: string
-  avatar: string
+  name: string;
+  rating: number;
+  comment: string;
+  avatar: string;
 }
 
 interface TestimonialsProps {
-  testimonials?: Testimonial[]
-  isVisible?: boolean
+  testimonials?: Testimonial[];
+  isVisible?: boolean;
 }
 
 const defaultTestimonials: Testimonial[] = [
   {
     name: "Adebayo Johnson",
     rating: 5,
-    comment: "Amazing experience! The apartment was exactly as described and the host was incredibly helpful.",
+    comment:
+      "Amazing experience! The apartment was exactly as described and the host was incredibly helpful.",
     avatar: "/professional-african-man-smiling.jpg",
   },
   {
     name: "Sarah Williams",
     rating: 5,
-    comment: "Perfect location and beautiful space. Will definitely book again for my next Lagos trip!",
+    comment:
+      "Perfect location and beautiful space. Will definitely book again for my next Lagos trip!",
     avatar: "/professional-woman-smiling.png",
   },
   {
     name: "Michael Chen",
     rating: 5,
-    comment: "Outstanding service and attention to detail. The booking process was seamless.",
+    comment:
+      "Outstanding service and attention to detail. The booking process was seamless.",
     avatar: "/professional-asian-man-smiling.jpg",
   },
   {
     name: "Fatima Al-Hassan",
     rating: 5,
-    comment: "Exceeded all expectations! Clean, comfortable, and great value for money.",
+    comment:
+      "Exceeded all expectations! Clean, comfortable, and great value for money.",
     avatar: "/professional-middle-eastern-woman-smiling.png",
   },
-]
+];
 
-export default function Testimonials({ testimonials = defaultTestimonials, isVisible = true }: TestimonialsProps) {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0)
+export default function Testimonials({
+  testimonials = defaultTestimonials,
+  isVisible = true,
+}: TestimonialsProps) {
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
-    }, 5000)
-    return () => clearInterval(interval)
-  }, [testimonials.length])
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
 
   return (
     <section className="py-24 px-4 bg-gradient-to-br from-white via-slate-50/30 to-white relative overflow-hidden">
       {/* Subtle decorative elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-gold-500/3 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-navy-900/3 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
-      
+
       <div className="max-w-5xl mx-auto relative z-10">
         <div
           id="testimonials"
@@ -87,9 +94,9 @@ export default function Testimonials({ testimonials = defaultTestimonials, isVis
                   <CardContent className="p-12 md:p-16 text-center relative">
                     {/* Decorative quote mark */}
                     <div className="absolute top-8 left-8 opacity-10">
-                      <Quote className="h-16 w-16 text-gold-500 fill-gold-500" />
+                      <LuQuote className="h-16 w-16 text-gold-500 fill-gold-500" />
                     </div>
-                    
+
                     {/* Avatar with gradient border */}
                     <div className="relative inline-block mb-8">
                       <div className="absolute inset-0 bg-gradient-to-br from-gold-400 via-gold-500 to-gold-600 rounded-full blur-sm" />
@@ -105,9 +112,9 @@ export default function Testimonials({ testimonials = defaultTestimonials, isVis
                     {/* Rating stars */}
                     <div className="flex justify-center gap-1.5 mb-8">
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star 
-                          key={i} 
-                          className="h-6 w-6 fill-gold-500 text-gold-500 drop-shadow-sm animate-in fade-in duration-300" 
+                        <LuStar
+                          key={i}
+                          className="h-6 w-6 fill-gold-500 text-gold-500 drop-shadow-sm animate-in fade-in duration-300"
                           style={{ animationDelay: `${i * 50}ms` }}
                         />
                       ))}
@@ -130,7 +137,7 @@ export default function Testimonials({ testimonials = defaultTestimonials, isVis
 
                     {/* Decorative quote mark */}
                     <div className="absolute bottom-8 right-8 opacity-10 rotate-180">
-                      <Quote className="h-16 w-16 text-gold-500 fill-gold-500" />
+                      <LuQuote className="h-16 w-16 text-gold-500 fill-gold-500" />
                     </div>
                   </CardContent>
                 </Card>
@@ -165,6 +172,5 @@ export default function Testimonials({ testimonials = defaultTestimonials, isVis
         </div>
       </div>
     </section>
-  )
+  );
 }
-
